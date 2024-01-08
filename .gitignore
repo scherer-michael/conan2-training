@@ -1,5 +1,14 @@
-# Prerequisites
-*.d
+**/conan-*
+**/cmake_install.cmake
+**/CMakeCache.txt
+**/compressor
+**/Makefile
+**/CMakeFiles
+**/cmake-build-*
+**/deactivate_conanbuildenv*
+
+.DS_Store
+.vscode/
 
 # Compiled Object files
 *.slo
@@ -30,3 +39,33 @@
 *.exe
 *.out
 *.app
+
+# Cache
+__pycache__/*
+build/*
+*.pyc
+tmp/
+
+# IDE
+.idea/*
+.project
+.pydevproject
+.settings/*
+.ropeproject/*
+
+.tox
+CMakeUserPresets.json
+**/generators/**
+**/build/**
+build/
+conanbuild*
+conanrun*
+deactivate_conanbuild*
+deactivate_conanrun*
+tutorial/versioning/revisions/intro/chat/*
+tutorial/versioning/revisions/intro/hello/*
+examples/libraries/tensorflow-lite/pose-estimation/pose-estimation
+examples/libraries/imgui/introduction/bindings
+
+# Bazel files
+bazel-*
