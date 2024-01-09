@@ -17,4 +17,4 @@ target_link_libraries(${PROJECT_NAME}
 enable_testing()
 add_subdirectory(tests)
 
-install(training)
+install(TARGETS ${PROJECT_NAME})
