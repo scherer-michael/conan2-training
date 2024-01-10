@@ -1,7 +1,5 @@
 from conan import ConanFile
-from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout
-from conan.tools.scm import Git
-from conan.tools.build import check_max_cppstd, check_min_cppstd
+from conan.tools.cmake import CMakeToolchain, CMakeDeps, CMake, cmake_layout
 
 
 class trainingRecipe(ConanFile):
@@ -37,6 +35,8 @@ class trainingRecipe(ConanFile):
     def generate(self):
         tc = CMakeToolchain(self)
         tc.generate()
+        deps = CMakeDeps(self)
+        deps.generate()
 
     def build(self):
         cmake = CMake(self)
